@@ -30,7 +30,7 @@ export const jobs: JobType[] = [
     duration: "January 2021 - Present",
     description: `Nathan was hired as the sole Frontend contributor to this fast-paced startup right after graduation. The small size of the company allowed him to try new roles and gain new expertise including: `,
     responsibilities: [
-      "Building, testing, and deploying a production-grade web app",
+      "Building, securing, and deploying a production-grade web app",
       "Designing attractive and intuitive UI / UX",
       "Shaping company goals into actionable projects",
     ],
