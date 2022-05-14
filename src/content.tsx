@@ -1,3 +1,17 @@
+export interface EducationType {
+  title: string;
+  subTitle: string;
+  school: string;
+  duration: string;
+}
+
+export const education: EducationType = {
+  title: "Bachelor of Computer Science",
+  subTitle: "Minor in Business Administration (CO-OP)",
+  school: "University of New Brunswick",
+  duration: "September, 2016 - December, 2020",
+};
+
 export const aboutText =
   "Nathan is a passionate, driven, and highly ambitious worker who takes immense pride in the things he creates. He cares deeply about the end user experience, and is dedicated to providing humane and beautiful interfaces for everyday use.";
 
@@ -47,3 +61,10 @@ export const jobs: JobType[] = [
     ],
   },
 ];
+
+export const contactInfo = {
+  email: "natemacd97@gmail.com",
+  phone: "(506) 471-3038",
+  linkedin: "https://ca.linkedin.com/in/nathan-macdonald-489503134",
+  github: "https://github.com/nmacdon3/Resume",
+};
