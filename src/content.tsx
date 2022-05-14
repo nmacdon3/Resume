@@ -65,6 +65,6 @@ export const jobs: JobType[] = [
 export const contactInfo = {
   email: "natemacd97@gmail.com",
   phone: "(506) 471-3038",
-  linkedin: "https://ca.linkedin.com/in/nathan-macdonald-489503134",
+  linkedin: "www.linkedin.com/in/nathanmacd",
   github: "https://github.com/nmacdon3/Resume",
 };
