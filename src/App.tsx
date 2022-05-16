@@ -18,11 +18,12 @@ import { Education } from "./components/Education";
 import { Job } from "./components/Job";
 import { Section } from "./components/Section";
 import { SubHeading } from "./components/SubHeading";
+import React from "react";
 
 function App() {
   return (
     <div className="h-screen bg-gradient-to-t from-gray-300   font-body flex  justify-center overflow-x-scroll   sm:py-10">
-      <div className="h-auto sm:h-[56rem] w-[44rem] bg-white relative px-10 shadow-2xl sm:overflow-hidden overflow-scroll flex flex-col sm:rounded-lg">
+      <div className="h-auto sm:h-[56rem] w-[43rem] bg-white relative px-10 shadow-2xl sm:overflow-hidden overflow-scroll flex flex-col sm:rounded-lg">
         <header className="flex items-start  shrink-0 pt-9">
           <Cover />
           <img
@@ -40,7 +41,7 @@ function App() {
           </div>
         </header>
         <section className="flex sm:space-x-16 mt-20 sm:mt-16  flex-grow flex-wrap  ">
-          <div className="w-full sm:w-[25rem] ">
+          <div className="w-full sm:w-[24rem] ">
             <Section title="About">
               <p className="text-gray-500 text-xs  text-justify">{aboutText}</p>
             </Section>
@@ -98,7 +99,10 @@ function App() {
             </span>
             <div className="flex items-center ">
               <AiFillLinkedin className="h-4 w-4 mr-1" />{" "}
-              <a className="hover:underline" href={contactInfo.linkedin}>
+              <a
+                className="hover:underline"
+                href={"https://" + contactInfo.linkedin}
+              >
                 {contactInfo.linkedin}
               </a>
             </div>
