@@ -6,7 +6,7 @@ export const Section = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="mb-10">
+    <div className="mb-6">
       <h3 className="tracking-widest text-md font-medium mb-2 uppercase">
         {title}
       </h3>

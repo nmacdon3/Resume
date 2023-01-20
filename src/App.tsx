@@ -18,16 +18,15 @@ import { Education } from "./components/Education";
 import { Job } from "./components/Job";
 import { Section } from "./components/Section";
 import { SubHeading } from "./components/SubHeading";
-import React from "react";
 
 function App() {
   return (
     <div className="h-screen bg-gradient-to-t from-gray-300   font-body flex  justify-center overflow-x-scroll   sm:py-10">
       <div className="h-auto sm:h-[56rem] w-[43rem] bg-white relative px-10 shadow-2xl sm:overflow-hidden overflow-scroll flex flex-col sm:rounded-lg">
-        <header className="flex items-start  shrink-0 pt-9">
+        <header className="flex items-start  shrink-0 pt-6">
           <Cover />
           <img
-            className="rounded-full ring-4 ring-white h-16 w-16 sm:h-24 sm:w-24 z-20 relative object-cover mr-8"
+            className="rounded-full ring-4 ring-white h-16 w-16 sm:h-16 sm:w-16 z-20 relative object-cover mr-8"
             src={profile}
           />
           <div>
@@ -40,7 +39,7 @@ function App() {
             </div>
           </div>
         </header>
-        <section className="flex sm:space-x-16 mt-20 sm:mt-16  flex-grow flex-wrap  ">
+        <section className="flex sm:space-x-16 mt-20 sm:mt-10  flex-grow flex-wrap  ">
           <div className="w-full sm:w-[24rem] ">
             <Section title="About">
               <p className="text-gray-500 text-xs  text-justify">{aboutText}</p>
@@ -50,7 +49,7 @@ function App() {
                 <div
                   key={i}
                   className={classnames(
-                    "pb-8 flex items-start ml-1  translate-y-1 -translate-x-1",
+                    "pb-7 flex items-start ml-1  translate-y-1 -translate-x-1",
                     i !== jobs.length - 1 && ""
                   )}
                 >
