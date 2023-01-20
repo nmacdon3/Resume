@@ -1,9 +1,9 @@
 import { motif } from "../classes";
 import { JobType } from "../content";
 import { BsDot } from "react-icons/bs";
-import { SubHeading } from "../components/SubHeading";
+import SubHeading from "../components/SubHeading";
 
-export const Job = ({ job }: { job: JobType }) => {
+const Job = ({ job }: { job: JobType }) => {
   return (
     <div style={{ color: motif }}>
       <SubHeading text={job.title} />
@@ -21,3 +21,5 @@ export const Job = ({ job }: { job: JobType }) => {
     </div>
   );
 };
+
+export default Job;

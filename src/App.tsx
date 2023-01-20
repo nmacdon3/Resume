@@ -15,9 +15,9 @@ import {
 import { accent } from "./classes";
 import { Cover } from "./components/Cover";
 import { Education } from "./components/Education";
-import { Job } from "./components/Job";
-import { Section } from "./components/Section";
-import { SubHeading } from "./components/SubHeading";
+import Job from "./components/Job";
+import Section from "./components/Section";
+import SubHeading from "./components/SubHeading";
 
 function App() {
   return (
