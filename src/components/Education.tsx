@@ -1,9 +1,10 @@
-import { EducationType } from "../content";
+import { education } from "../content";
 import { motif } from "../classes";
+import Section from "./Section";
 
-export const Education = ({ education }: { education: EducationType }) => {
+const Education = () => {
   return (
-    <>
+    <Section title="Education">
       <h4 className="text-xs  w-40  text-gray-500">
         <span className="font-medium text-gray-700">{education.title}</span>,{" "}
         {education.subTitle}
@@ -14,6 +15,8 @@ export const Education = ({ education }: { education: EducationType }) => {
       <h5 style={{ color: "#A57A58" }} className="text-xs opacity-80 mt-1">
         {education.duration}
       </h5>
-    </>
+    </Section>
   );
 };
+
+export default Education;
