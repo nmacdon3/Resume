@@ -1,12 +1,11 @@
 import { BsDot } from 'react-icons/bs';
 
-import { motif } from '~/classes';
 import { JobType } from '~/content';
 import SubHeading from '~/components/SubHeading';
 
 const Job = ({ job }: { job: JobType }) => {
   return (
-    <div style={{ color: motif }}>
+    <div className="text-motif">
       <SubHeading text={job.title} />
       <div className="flex items-center  space-x-1  text-xs  tracking-wider ">
         <span className="font-medium ">{job.company}</span>
