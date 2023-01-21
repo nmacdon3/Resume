@@ -1,9 +1,9 @@
-import Education from "./Education";
-import Header from "./Header";
-import About from "./About";
-import Experience from "./Experience";
-import Skills from "./Skills";
-import Footer from "./Footer";
+import Education from './Education';
+import Header from './Header';
+import About from './About';
+import Experience from './Experience';
+import Skills from './Skills';
+import Footer from './Footer';
 
 const Resume = () => {
   return (

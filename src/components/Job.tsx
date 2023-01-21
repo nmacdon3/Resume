@@ -1,7 +1,8 @@
-import { motif } from "~/classes";
-import { JobType } from "~/content";
-import { BsDot } from "react-icons/bs";
-import SubHeading from "~/components/SubHeading";
+import { BsDot } from 'react-icons/bs';
+
+import { motif } from '~/classes';
+import { JobType } from '~/content';
+import SubHeading from '~/components/SubHeading';
 
 const Job = ({ job }: { job: JobType }) => {
   return (
@@ -12,11 +13,11 @@ const Job = ({ job }: { job: JobType }) => {
         <BsDot className="h-4 w-4" />
         <span className="opacity-90"> {job.duration}</span>
       </div>
-      <p className="text-xs text-gray-500 text-justify mt-2 mb-2">
-        {job.description}
-      </p>
+      <p className="text-xs text-gray-500 text-justify mt-2 mb-2">{job.description}</p>
       {job.responsibilities.map((resp) => (
-        <li className="text-xs text-gray-500 ml-5">{resp}</li>
+        <li key={resp} className="text-xs text-gray-500 ml-5">
+          {resp}
+        </li>
       ))}
     </div>
   );

@@ -1,5 +1,6 @@
-import { aboutText } from "~/content";
-import Section from "./Section";
+import { aboutText } from '~/content';
+
+import Section from './Section';
 
 const About = () => {
   return (

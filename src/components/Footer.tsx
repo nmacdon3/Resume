@@ -1,16 +1,17 @@
-import classNames from "classnames";
-import { IconType } from "react-icons";
-import { AiOutlinePhone, AiFillLinkedin } from "react-icons/ai";
-import { BsCode } from "react-icons/bs";
-import { FaReact } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { contactInfo } from "~/content";
+import classNames from 'classnames';
+import { IconType } from 'react-icons';
+import { AiOutlinePhone, AiFillLinkedin } from 'react-icons/ai';
+import { BsCode } from 'react-icons/bs';
+import { FaReact } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+
+import { contactInfo } from '~/content';
 
 const FooterItem = ({
   icon,
   text,
   link,
-  className,
+  className
 }: {
   icon: { value: IconType };
   text: string;
@@ -18,7 +19,7 @@ const FooterItem = ({
   className?: string;
 }) => {
   return (
-    <span className={classNames("flex items-center ", className)}>
+    <span className={classNames('flex items-center ', className)}>
       <icon.value className="h-4 w-4 mr-1" />
       {link ? (
         <a className="hover:underline" href={link}>
@@ -48,10 +49,7 @@ const Footer = () => {
         />
       </div>
       <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3">
-        <FooterItem
-          icon={{ value: FaReact }}
-          text="This resume was built with React"
-        />
+        <FooterItem icon={{ value: FaReact }} text="This resume was built with React" />
         <FooterItem
           icon={{ value: BsCode }}
           text="See Code"

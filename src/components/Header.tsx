@@ -1,14 +1,12 @@
-import { HiPlus } from "react-icons/hi";
-import PROFILE_PIC from "~/assets/brighter.png";
-import COVER_PIC from "~/assets/cover.png";
+import { HiPlus } from 'react-icons/hi';
+
+import PROFILE_PIC from '~/assets/brighter.png';
+import COVER_PIC from '~/assets/cover.png';
 
 const Header = () => {
   return (
     <header className="flex items-start  shrink-0 pt-6">
-      <img
-        src={COVER_PIC}
-        className=" object-cover absolute top-0 left-0 h-28 w-full "
-      />
+      <img src={COVER_PIC} className=" object-cover absolute top-0 left-0 h-28 w-full " />
       <img
         className="rounded-full ring-4 ring-white h-16 w-16 sm:h-16 sm:w-16 z-20 relative object-cover mr-8"
         src={PROFILE_PIC}
