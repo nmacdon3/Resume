@@ -4,7 +4,7 @@ import { AiOutlinePhone, AiFillLinkedin } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { contactInfo } from "../content";
+import { contactInfo } from "~/content";
 
 const FooterItem = ({
   icon,

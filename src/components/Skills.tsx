@@ -1,4 +1,4 @@
-import { technicalSkills, professionalSkills } from "../content";
+import { technicalSkills, professionalSkills } from "~/content";
 import Section from "./Section";
 import SubHeading from "./SubHeading";
 

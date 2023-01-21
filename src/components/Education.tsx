@@ -1,5 +1,5 @@
-import { education } from "../content";
-import { motif } from "../classes";
+import { education } from "~/content";
+import { motif } from "~/classes";
 import Section from "./Section";
 
 const Education = () => {

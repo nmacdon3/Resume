@@ -1,7 +1,7 @@
-import { motif } from "../classes";
-import { JobType } from "../content";
+import { motif } from "~/classes";
+import { JobType } from "~/content";
 import { BsDot } from "react-icons/bs";
-import SubHeading from "../components/SubHeading";
+import SubHeading from "~/components/SubHeading";
 
 const Job = ({ job }: { job: JobType }) => {
   return (

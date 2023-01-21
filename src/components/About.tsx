@@ -1,4 +1,4 @@
-import { aboutText } from "../content";
+import { aboutText } from "~/content";
 import Section from "./Section";
 
 const About = () => {

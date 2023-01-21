@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import { HiChevronRight } from "react-icons/hi";
-import { accent } from "../classes";
-import { jobs } from "../content";
+import { accent } from "~/classes";
+import { jobs } from "~/content";
 import Job from "./Job";
 import Section from "./Section";
 

@@ -1,6 +1,6 @@
 import { HiPlus } from "react-icons/hi";
-import PROFILE_PIC from "../assets/brighter.png";
-import COVER_PIC from "../assets/cover.png";
+import PROFILE_PIC from "~/assets/brighter.png";
+import COVER_PIC from "~/assets/cover.png";
 
 const Header = () => {
   return (
