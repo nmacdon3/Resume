@@ -5,7 +5,7 @@ import { BsCode } from 'react-icons/bs';
 import { FaReact } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 
-import { contactInfo } from '~/content';
+import { useContactInfo } from '~/store/contact';
 
 const FooterItem = ({
   icon,
@@ -33,30 +33,40 @@ const FooterItem = ({
 };
 
 const Footer = () => {
+  const { data: contact_info, isLoading } = useContactInfo();
+
   return (
     <footer className="border-t border-orange-800/60 w-full h-20 text-xs py-4 text-gray-500 space-y-2 ">
-      <div className="sm:flex items-center sm:space-x-3 mb-4 space-y-1 sm:space-y-0">
-        <FooterItem
-          icon={{ value: HiOutlineMail }}
-          text={contactInfo.email}
-          link={`mailto:${contactInfo.email}`}
-        />
-        <FooterItem icon={{ value: AiOutlinePhone }} text={contactInfo.phone} />
-        <FooterItem
-          icon={{ value: AiFillLinkedin }}
-          text={contactInfo.linkedin}
-          link={`https://${contactInfo.linkedin}`}
-        />
-      </div>
-      <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3">
-        <FooterItem icon={{ value: FaReact }} text="This resume was built with React" />
-        <FooterItem
-          icon={{ value: BsCode }}
-          text="See Code"
-          link={contactInfo.github}
-          className="text-orange-800"
-        />
-      </div>
+      {isLoading ? (
+        'Loading...'
+      ) : !contact_info ? (
+        'Oops...'
+      ) : (
+        <>
+          <div className="sm:flex items-center sm:space-x-3 mb-4 space-y-1 sm:space-y-0">
+            <FooterItem
+              icon={{ value: HiOutlineMail }}
+              text={contact_info.email}
+              link={`mailto:${contact_info.email}`}
+            />
+            <FooterItem icon={{ value: AiOutlinePhone }} text={contact_info.phone} />
+            <FooterItem
+              icon={{ value: AiFillLinkedin }}
+              text={contact_info.linkedin}
+              link={`https://${contact_info.linkedin}`}
+            />
+          </div>
+          <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3">
+            <FooterItem icon={{ value: FaReact }} text="This resume was built with React" />
+            <FooterItem
+              icon={{ value: BsCode }}
+              text="See Code"
+              link={contact_info.github}
+              className="text-orange-800"
+            />
+          </div>
+        </>
+      )}
     </footer>
   );
 };

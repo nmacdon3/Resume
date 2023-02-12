@@ -1,44 +1,32 @@
-export interface EducationType {
-  title: string;
-  subTitle: string;
-  school: string;
-  duration: string;
-}
+import { ContactInfo } from './contact';
+import { EducationType } from './education';
+import { JobType } from './jobs';
 
-export const education: EducationType = {
-  title: 'Bachelor of Computer Science',
-  subTitle: 'Minor in Business Administration (CO-OP)',
-  school: 'University of New Brunswick',
-  duration: 'September, 2016 - December, 2020'
-};
-
-export const aboutText =
-  'Nathan is a passionate, driven, and highly ambitious worker who takes immense pride in the things he creates. He cares deeply about the end user experience, and is dedicated to providing humane and beautiful interfaces for everyday use.';
+export const education: EducationType[] = [
+  {
+    title: 'Bachelor of Computer Science',
+    subTitle: 'Minor in Business Administration (CO-OP)',
+    school: 'University of New Brunswick',
+    duration: 'September, 2016 - December, 2020'
+  }
+];
 
 export const technicalSkills: string[] = [
   'React',
   'Typescript',
   'UI/UX Design',
   'CSS',
-  'Testing',
-  'API Development',
-  'Python'
+  'API Design',
+  'Logging and Monitoring'
 ];
 
 export const professionalSkills: string[] = [
   'Project Management',
-  'Fast Learning',
-  'Communication',
-  'Finding Solutions'
+  'Independent Learning',
+  'Clear Communication',
+  'Customer-First Mindset',
+  'Mentoring'
 ];
-
-export interface JobType {
-  title: string;
-  company: string;
-  duration: string;
-  description: string;
-  responsibilities: string[];
-}
 
 export const jobs: JobType[] = [
   {
@@ -70,14 +58,14 @@ export const jobs: JobType[] = [
     description: `Nathan worked 5 terms during his formal education as part of his CO-OP designation. Each term taught him new skills such as:`,
     responsibilities: [
       "Performing automated QA on an app's frontend",
-      'Thorough understanding of SCRUM and agile methodologies'
+      'Thorough understanding of SCRUM and agile methodologiess'
     ]
   }
 ];
 
-export const contactInfo: Record<string, string> = {
+export const contactInfo: ContactInfo = {
   email: 'natemacd97@gmail.com',
   phone: '(506) 471-3038',
   linkedin: 'www.linkedin.com/in/nathanmacd',
-  github: 'https://github.com/nmacdon3/Resume'
+  github: 'https://github.com/nmacdon3'
 };
