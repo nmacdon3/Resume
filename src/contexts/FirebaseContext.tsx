@@ -3,7 +3,7 @@ import { getFirestore } from 'firebase/firestore';
 import { ReactNode } from 'react';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyBhCceLOrVjvS6DJsY7rU0sbscU3FYqm3Y',
+  apiKey: import.meta.env.VITE_FIRESTORE_APIKEY,
   authDomain: 'resume-53741.firebaseapp.com',
   projectId: 'resume-53741',
   storageBucket: 'resume-53741.appspot.com',
