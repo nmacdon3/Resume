@@ -24,7 +24,7 @@ const Education = () => {
       {education.isLoading ? (
         <Skeleton count={4} />
       ) : (
-        education.data?.map((item) => <EducationItem key={item.title} education={item} />)
+        education.data?.map((item) => <EducationItem key={item.id} education={item} />)
       )}
     </Section>
   );

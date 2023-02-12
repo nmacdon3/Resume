@@ -36,13 +36,8 @@ const Experience = () => {
       {jobs.isLoading ? (
         <Skeleton count={6} />
       ) : (
-        jobs.data?.map((job, i) => (
-          <div
-            key={i}
-            className={classnames(
-              'pb-7 flex items-start ml-1  translate-y-1 -translate-x-1',
-              i !== jobs.data.length - 1 && ''
-            )}>
+        jobs.data?.map((job) => (
+          <div key={job.id} className="pb-7 flex items-start ml-1  translate-y-1 -translate-x-1">
             <HiChevronRight className="h-4 w-4  rounded-full shrink-0  mr-1 -translate-x-1 text-accent" />
             <Job job={job} />
           </div>

@@ -1,10 +1,10 @@
 module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
         motif: '#A57A58',
-        accent: '#8B8064'
+        accent: '#0ea5e9'
       },
       fontFamily: {
         body: ['Roboto', 'sans-serif']

@@ -5,6 +5,7 @@ import { education } from '~/store/store-backup';
 import { db } from '~/contexts/FirebaseContext';
 
 export interface EducationType {
+  id: string;
   title: string;
   subTitle: string;
   school: string;
@@ -14,7 +15,7 @@ export interface EducationType {
 export function useEducation() {
   return useQuery<EducationType[]>(['education'], () =>
     getDocs(collection(db, 'education')).then(
-      (r) => r.docs.map((doc) => doc.data()) as EducationType[],
+      (r) => r.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as EducationType[],
       () => education
     )
   );

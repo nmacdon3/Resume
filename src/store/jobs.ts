@@ -5,6 +5,7 @@ import { jobs } from '~/store/store-backup';
 import { db } from '~/contexts/FirebaseContext';
 
 export interface JobType {
+  id: string;
   title: string;
   company: string;
   duration: string;
@@ -15,7 +16,7 @@ export interface JobType {
 export function useJobs() {
   return useQuery<JobType[]>(['jobs'], () =>
     getDocs(collection(db, 'jobs')).then(
-      (r) => r.docs.map((doc) => doc.data()) as JobType[],
+      (r) => r.docs.map((doc) => ({ ...doc.data(), id: doc.id })) as JobType[],
       () => jobs
     )
   );

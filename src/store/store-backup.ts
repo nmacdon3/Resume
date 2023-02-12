@@ -4,6 +4,7 @@ import { JobType } from './jobs';
 
 export const education: EducationType[] = [
   {
+    id: '1',
     title: 'Bachelor of Computer Science',
     subTitle: 'Minor in Business Administration (CO-OP)',
     school: 'University of New Brunswick',
@@ -30,6 +31,7 @@ export const professionalSkills: string[] = [
 
 export const jobs: JobType[] = [
   {
+    id: '1',
     title: 'Frontend Developer',
     company: 'Magnet Forensics',
     duration: 'July 2022 - Present',
@@ -41,6 +43,7 @@ export const jobs: JobType[] = [
     ]
   },
   {
+    id: '2',
     title: 'Lead Frontend Developer - Lead UX Designer',
     company: 'Gray Wolf Analytics Inc.',
     duration: 'January 2021 - July 2022',
@@ -52,6 +55,7 @@ export const jobs: JobType[] = [
     ]
   },
   {
+    id: '3',
     title: 'Software Developer',
     company: 'IBM',
     duration: 'September 2017 - September 2020',

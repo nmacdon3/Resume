@@ -1,1 +1,1 @@
-export const lastUpdated = 100;
+export const lastUpdated = 0;
