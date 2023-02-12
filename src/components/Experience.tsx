@@ -20,7 +20,7 @@ const Job = ({ job }: { job: JobType }) => {
       </div>
       <p className="text-xs text-gray-500 text-justify mt-2 mb-2">{job.description}</p>
       {job.responsibilities.map((resp) => (
-        <li key={resp} className="text-xs text-gray-500 ml-5">
+        <li key={resp} className="text-xs text-gray-500 ml-2">
           {resp}
         </li>
       ))}
