@@ -18,7 +18,7 @@ const App = () => {
       )}>
       <div
         className={classNames(
-          'h-screen w-screen absolute top-0 left-0 transition-all duration-1000 bg-white',
+          'h-screen w-screen absolute top-0 left-0 transition-all duration-1000 bg-white -z-10',
           show ? 'opacity-0' : 'opacity-100'
         )}></div>
       <Transition
