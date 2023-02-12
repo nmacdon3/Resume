@@ -5,9 +5,11 @@ import { BsCode } from 'react-icons/bs';
 import { FaReact } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
 
+import 'react-loading-skeleton/dist/skeleton.css';
+import { lastUpdated } from '~/last-updated';
 import { useContactInfo } from '~/store/contact';
+import { convertTimestamp } from '~/utils';
 
 const FooterItem = ({
   icon,
@@ -36,9 +38,10 @@ const FooterItem = ({
 
 const Footer = () => {
   const contactInfo = useContactInfo();
+  const humanReadable = convertTimestamp(lastUpdated);
 
   return (
-    <footer className="border-t border-orange-800/60 w-full h-20 text-xs py-4 text-gray-500 space-y-2 ">
+    <footer className="border-t border-orange-800/60 w-full h-20 text-xs py-4 text-gray-500 space-y-2 relative ">
       {contactInfo.isLoading ? (
         <Skeleton />
       ) : (
@@ -67,6 +70,9 @@ const Footer = () => {
           </div>
         </>
       )}
+      <div className="text-xs text-gray-400 absolute bottom-4 right-0">
+        Last updated: {humanReadable}
+      </div>
     </footer>
   );
 };
