@@ -1,6 +1,8 @@
 import classnames from 'classnames';
 import { BsDot } from 'react-icons/bs';
 import { HiChevronRight } from 'react-icons/hi';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 import { JobType, useJobs } from '~/store/jobs';
 
@@ -31,17 +33,21 @@ const Experience = () => {
 
   return (
     <Section title="Experience">
-      {jobs.data?.map((job, i) => (
-        <div
-          key={i}
-          className={classnames(
-            'pb-7 flex items-start ml-1  translate-y-1 -translate-x-1',
-            i !== jobs.data.length - 1 && ''
-          )}>
-          <HiChevronRight className="h-4 w-4  rounded-full shrink-0  mr-1 -translate-x-1 text-accent" />
-          <Job job={job} />
-        </div>
-      ))}
+      {jobs.isLoading ? (
+        <Skeleton count={6} />
+      ) : (
+        jobs.data?.map((job, i) => (
+          <div
+            key={i}
+            className={classnames(
+              'pb-7 flex items-start ml-1  translate-y-1 -translate-x-1',
+              i !== jobs.data.length - 1 && ''
+            )}>
+            <HiChevronRight className="h-4 w-4  rounded-full shrink-0  mr-1 -translate-x-1 text-accent" />
+            <Job job={job} />
+          </div>
+        ))
+      )}
     </Section>
   );
 };

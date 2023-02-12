@@ -4,6 +4,8 @@ import { AiOutlinePhone, AiFillLinkedin } from 'react-icons/ai';
 import { BsCode } from 'react-icons/bs';
 import { FaReact } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 import { useContactInfo } from '~/store/contact';
 
@@ -14,7 +16,7 @@ const FooterItem = ({
   className
 }: {
   icon: { value: IconType };
-  text: string;
+  text?: string;
   link?: string;
   className?: string;
 }) => {
@@ -33,27 +35,25 @@ const FooterItem = ({
 };
 
 const Footer = () => {
-  const { data: contact_info, isLoading } = useContactInfo();
+  const contactInfo = useContactInfo();
 
   return (
     <footer className="border-t border-orange-800/60 w-full h-20 text-xs py-4 text-gray-500 space-y-2 ">
-      {isLoading ? (
-        'Loading...'
-      ) : !contact_info ? (
-        'Oops...'
+      {contactInfo.isLoading ? (
+        <Skeleton />
       ) : (
         <>
           <div className="sm:flex items-center sm:space-x-3 mb-4 space-y-1 sm:space-y-0">
             <FooterItem
               icon={{ value: HiOutlineMail }}
-              text={contact_info.email}
-              link={`mailto:${contact_info.email}`}
+              text={contactInfo.data?.email}
+              link={`mailto:${contactInfo.data?.email}`}
             />
-            <FooterItem icon={{ value: AiOutlinePhone }} text={contact_info.phone} />
+            <FooterItem icon={{ value: AiOutlinePhone }} text={contactInfo.data?.phone} />
             <FooterItem
               icon={{ value: AiFillLinkedin }}
-              text={contact_info.linkedin}
-              link={`https://${contact_info.linkedin}`}
+              text={contactInfo.data?.linkedin}
+              link={`https://${contactInfo.data?.linkedin}`}
             />
           </div>
           <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3">
@@ -61,7 +61,7 @@ const Footer = () => {
             <FooterItem
               icon={{ value: BsCode }}
               text="See Code"
-              link={contact_info.github}
+              link={contactInfo.data?.github}
               className="text-orange-800"
             />
           </div>

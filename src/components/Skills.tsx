@@ -1,27 +1,38 @@
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import { useLeadershipSkills, useTechnicalSkills } from '~/store/skills';
 
 import Section from './Section';
 import SubHeading from './SubHeading';
 
 const Skills = () => {
-  const professionalSkills = useLeadershipSkills();
+  const leadershipSkills = useLeadershipSkills();
   const technicalSkills = useTechnicalSkills();
 
   return (
     <Section title="Skills">
       <SubHeading text="Technical" />
-      {technicalSkills.data?.map((skill) => (
-        <li key={skill.skill} className="text-xs text-gray-500">
-          {skill.skill}
-        </li>
-      ))}
+      {technicalSkills.isLoading ? (
+        <Skeleton count={4} />
+      ) : (
+        technicalSkills.data?.map((skill) => (
+          <li key={skill.skill} className="text-xs text-gray-500">
+            {skill.skill}
+          </li>
+        ))
+      )}
       <br></br>
       <SubHeading text="Leadership" />
-      {professionalSkills.data?.map((skill) => (
-        <li key={skill.skill} className="text-xs text-gray-500">
-          {skill.skill}
-        </li>
-      ))}
+      {leadershipSkills.isLoading ? (
+        <Skeleton count={4} />
+      ) : (
+        leadershipSkills.data?.map((skill) => (
+          <li key={skill.skill} className="text-xs text-gray-500">
+            {skill.skill}
+          </li>
+        ))
+      )}
     </Section>
   );
 };

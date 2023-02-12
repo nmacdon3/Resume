@@ -6,7 +6,7 @@ import COVER_PIC from '~/assets/cover.webp';
 const Header = () => {
   return (
     <header className="flex items-start  shrink-0 pt-6">
-      <img src={COVER_PIC} className=" object-cover absolute top-0 left-0 sm:h-28 w-full " />
+      <img src={COVER_PIC} className=" object-cover absolute top-0 left-0  w-full h-28 " />
       <img
         className="rounded-full ring-2 ring-white h-14 w-14 sm:h-16 sm:w-16 z-20 relative object-cover mr-8"
         src={PROFILE_PIC}

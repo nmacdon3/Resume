@@ -1,3 +1,6 @@
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import { EducationType, useEducation } from '~/store/education';
 
 import Section from './Section';
@@ -18,9 +21,11 @@ const Education = () => {
   const education = useEducation();
   return (
     <Section title="Education">
-      {education.data?.map((item) => (
-        <EducationItem key={item.title} education={item} />
-      ))}
+      {education.isLoading ? (
+        <Skeleton count={4} />
+      ) : (
+        education.data?.map((item) => <EducationItem key={item.title} education={item} />)
+      )}
     </Section>
   );
 };
