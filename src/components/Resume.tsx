@@ -9,8 +9,8 @@ const Resume = () => {
   return (
     <>
       <Header />
-      <div className="flex sm:space-x-16 print:space-x-10 mt-12 sm:mt-10 print:mt-16  flex-grow flex-wrap print:pl-16 ">
-        <section className="w-full sm:w-[24rem] print:w-[28rem]">
+      <div className="flex sm:space-x-16 print:space-x-10 mt-12 sm:mt-10 print:mt-12  flex-grow flex-wrap print:pl-16 ">
+        <section className="w-full sm:w-[24rem] print:w-[28.5rem]">
           <About />
           <Experience />
         </section>
