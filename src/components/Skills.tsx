@@ -17,7 +17,7 @@ const Skills = () => {
         <Skeleton count={4} />
       ) : (
         technicalSkills.data?.map((skill) => (
-          <li key={skill.id} className="text-xs text-gray-500">
+          <li key={skill.id} className="text-xs print:text-sm text-gray-500">
             {skill.skill}
           </li>
         ))
@@ -28,7 +28,7 @@ const Skills = () => {
         <Skeleton count={4} />
       ) : (
         leadershipSkills.data?.map((skill) => (
-          <li key={skill.id} className="text-xs text-gray-500">
+          <li key={skill.id} className="text-xs print:text-sm text-gray-500">
             {skill.skill}
           </li>
         ))

@@ -23,10 +23,13 @@ const App = () => {
         )}></div>
       <Transition
         show={show}
-        className="transition-all ease-in-out duration-1000 shadow h-auto sm:h-[56rem] w-[43rem] sm:overflow-hidden overflow-scroll flex flex-col bg-white relative px-10  sm:rounded-lg"
-        enterFrom="sm:opacity-0 sm:scale-90 sm:translate-y-0 translate-y-full">
+        className="print:hidden print:absolute transition-all ease-in-out duration-1000 shadow h-auto sm:h-[56rem] w-[43rem] sm:overflow-hidden overflow-scroll flex flex-col bg-white relative px-10  sm:rounded-lg"
+        enterFrom="opacity-0 scale-90 translate-y-0">
         <Resume />
       </Transition>
+      <div className="absolute invisible print:visible print:relative h-full w-full z-100 top-0 left-0">
+        <Resume />
+      </div>
     </div>
   );
 };

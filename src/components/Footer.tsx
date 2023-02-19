@@ -41,12 +41,12 @@ const Footer = () => {
   const humanReadable = convertTimestamp(lastUpdated);
 
   return (
-    <footer className="border-t border-orange-800/60 w-full h-20 text-xs py-4 text-gray-500 space-y-2 relative ">
+    <footer className=" w-full h-20 text-xs print:text-sm  text-gray-500 space-y-2 relative print:px-16 ">
       {contactInfo.isLoading ? (
         <Skeleton />
       ) : (
         <>
-          <div className="sm:flex items-center sm:space-x-3 mb-4 space-y-1 sm:space-y-0">
+          <div className="sm:flex print:flex border-t  border-orange-800/60 pt-4 items-center sm:space-x-3 print:space-x-3 mb-4 space-y-1 sm:space-y-0 print:space-y-0">
             <FooterItem
               icon={{ value: HiOutlineMail }}
               text={contactInfo.data?.email}
@@ -59,7 +59,7 @@ const Footer = () => {
               link={`https://${contactInfo.data?.linkedin}`}
             />
           </div>
-          <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3">
+          <div className="flex items-center  pb-4 sm:pb-0 sm:space-x-3 print:space-x-3 ">
             <FooterItem icon={{ value: FaReact }} text="This resume was built with React" />
             <FooterItem
               icon={{ value: BsCode }}
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </>
       )}
-      <div className="text-xs text-gray-400 absolute bottom-4 right-0">
+      <div className="text-xs  text-gray-400 absolute bottom-4 right-0 print:right-16  ">
         Last updated: {humanReadable}
       </div>
     </footer>

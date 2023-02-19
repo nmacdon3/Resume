@@ -7,7 +7,9 @@ const queryClient = new QueryClient({ defaultOptions: { queries: { staleTime: In
 export const QueryContext = ({ children }: { children: ReactNode }) => {
   return (
     <QueryClientProvider client={queryClient}>
-      <ReactQueryDevtools initialIsOpen={false} />
+      <div className="print:hidden">
+        <ReactQueryDevtools initialIsOpen={false} />
+      </div>
       {children}
     </QueryClientProvider>
   );
