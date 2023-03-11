@@ -7,7 +7,7 @@ import Footer from './Footer';
 
 const Resume = () => {
   return (
-    <>
+    <div className=" print:h-full print:w-full transition-all ease-in-out duration-1000 shadow h-auto sm:h-[56rem] w-[43rem] sm:overflow-hidden overflow-scroll flex flex-col bg-white relative px-10 print:px-0  sm:rounded-lg">
       <Header />
       <div className="flex sm:space-x-16 print:space-x-10 mt-12 sm:mt-10 print:mt-12  flex-grow flex-wrap print:pl-16 ">
         <section className="w-full sm:w-[24rem] print:w-[28.5rem]">
@@ -20,7 +20,7 @@ const Resume = () => {
         </aside>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 

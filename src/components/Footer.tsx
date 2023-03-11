@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </>
       )}
-      <div className="text-xs  text-gray-400 absolute bottom-4 right-0 print:right-16  print:hidden">
+      <div className="text-xs  text-gray-400 md:absolute md:pb-0 pb-2 bottom-4 right-0 print:right-16  print:hidden">
         Last updated: {humanReadable}
       </div>
     </footer>
