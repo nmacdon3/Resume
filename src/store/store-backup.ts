@@ -35,7 +35,7 @@ export const jobs: JobType[] = [
     title: 'Frontend Developer',
     company: 'Magnet Forensics',
     duration: 'July 2022 - Present',
-    description: `Hired to spearhead web development for an new product being launched and to mentor other developers. `,
+    description: `Hired to spearhead web development for a new product being launched and to mentor other developers. `,
     responsibilities: [
       'Rewriting entire repositories to be clean, fast, and future-proof',
       'Leading efforts in API design, UX, DX, testing, and security',
@@ -47,7 +47,7 @@ export const jobs: JobType[] = [
     title: 'Lead Frontend Developer - Lead UX Designer',
     company: 'Gray Wolf Analytics Inc.',
     duration: 'January 2021 - July 2022',
-    description: `Sole Frontend contributor for fast-paced startup. The small size of the company allowed for Nathan to learn many new skills, such as: `,
+    description: `Sole Frontend contributor for fast-paced startup. The small size of the company allowed Nathan to learn many new skills, including: `,
     responsibilities: [
       'Building, securing, and deploying a production-grade web app',
       'Designing attractive and intuitive UI / UX',
@@ -62,7 +62,8 @@ export const jobs: JobType[] = [
     description: `Nathan worked 5 terms during his formal education as part of his CO-OP designation. Each term taught him new skills such as:`,
     responsibilities: [
       "Performing automated QA on an app's frontend",
-      'Thorough understanding of SCRUM and agile methodologiess'
+      'Thorough understanding of SCRUM and agile methodologies',
+      'Strong foundation in SaaS technologies'
     ]
   }
 ];

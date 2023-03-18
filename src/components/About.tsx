@@ -5,7 +5,7 @@ const About = () => {
     <Section title="About">
       <p className="text-gray-500 text-xs print:text-sm  text-justify">
         Nathan is a passionate, driven, and highly ambitious worker who takes immense pride in the
-        things he creates. He cares deeply about the end user experience, and is dedicated to
+        things he creates. He cares deeply about the end-user experience, and is dedicated to
         providing humane and beautiful interfaces for everyday use.
       </p>
     </Section>

@@ -2,6 +2,11 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { ReactNode } from 'react';
 
+//Resume values are stored in firestore, with backups stored on disk (store-backup.ts).
+//This isn't because I think static, user-facing strings should be stored in the db,
+//but just to include some querying logic in this project to showcase how'd I'd typically
+//go about it :) - Nathan
+
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIRESTORE_APIKEY,
   authDomain: 'resume-53741.firebaseapp.com',
